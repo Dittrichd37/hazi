@@ -6,24 +6,40 @@
     <title>emailgeci</title>
 </head>
 <body>
-    <input type="text" class="form-control" id="inputA" name="email" placeholder="emailgeci" required>
-    <br>
-    <input type="text" class="form-control" id="inputA" name="név" placeholder="nevedgeci" required>
-<br>
-    <input type="checkbox" name="ASZF elfogadása" checked id="aszf"> ASZF elfogadása
-    <br>
-    <input type="checkbox" name="Hírlevés feliratkozás" checked id=""> Hírlevés feliratkozás
-<br>
-    <input type="button" value="ok" placeholder="OK"  >
+    <form action="javascript:muti()">
+        <fieldset style="width: fit-content;margin-left: auto;margin-right: auto; margin-top: 30vh;">
+            <input type="text" class="form-control" id="inputA" name="email" placeholder="emailgeci" required>
+            <br>
+            <input type="text" class="form-control" id="inputA" name="név" placeholder="nevedgeci" required>
+            <br>
+            <input type="checkbox" name="ASZF elfogadása" checked id="aszf"> ASZF elfogadása
+            <br>
+            <input type="checkbox" name="Hírlevés feliratkozás" checked id="hir"> Hírlevés feliratkozás
+            <br>
+            <input type="button" value="ok" placeholder="OK"  >
+        </fieldset>
+    </form>
 
-    <script>localStorage.setItem("e</script>
-
-    function ASZF elfogadása() {if (aszf.checked) {
-        localStorage.setItem("email", id value);
-    }
-        else {alert("fogaddel");
+    
+<script>
+    function felir() {
+        if (aszf.checked) {
+            localStorage.setItem("email",email.value);
+            localStorage.setItem("nev",name_input.value);
+            if (hir_checked) {
+                localStorage.setItem("Hírlevél", "igen");
+                alert("Sikeresen feliratkoztál");
+            }
+            else {
+                localStorage.setItem("Hírlevél", "nem");
+            }
+        }
+        else {
+            alert("fogadd el!");
         }
     }
+</script>
+    
 </body>
 </html>
 
